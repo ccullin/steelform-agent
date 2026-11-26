@@ -77,6 +77,7 @@ Map incoming data to your `project` schema in `Steelform-website`:
   - `gallery`: array of `imageWithAlt` items (`{ _key, _type: "reference", _ref, alt }`) for additional photos (up to 3 total photos per email)
   - `industries`: array of `{ _key, _type: "reference", _ref }` (`industry`)
   - `equipmentTypes`: array of `{ _key, _type: "reference", _ref }` (`equipmentType`)
+  
 
 
 
