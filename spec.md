@@ -63,3 +63,20 @@ Map incoming data to your `project` schema in `Steelform-website`:
         ├── graph.ts
         ├── llm.ts
         └── sanity.ts
+
+## 4. Sanity `project` Schema Contract (Steelform)
+- Document `_type`: `"project"`
+- Required fields:
+  - `title`: string
+  - `slug`: `{ _type: "slug", current: string }`
+  - `publishDate`: ISO datetime string
+  - `heroImage`: `imageWithAlt` object referencing uploaded image asset (`_ref`) + `alt` text
+  - `solutions`: non-empty array of `{ _key, _type: "reference", _ref }` pointing to `solution` docs where `solutionType == "child"`
+- Optional fields:
+  - `summary`: string
+  - `gallery`: array of `imageWithAlt` items (`{ _key, _type: "reference", _ref, alt }`) for additional photos (up to 3 total photos per email)
+  - `industries`: array of `{ _key, _type: "reference", _ref }` (`industry`)
+  - `equipmentTypes`: array of `{ _key, _type: "reference", _ref }` (`equipmentType`)
+
+
+
