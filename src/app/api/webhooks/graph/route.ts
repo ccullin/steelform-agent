@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { processGraphNotifications } from '@/lib/graph-agent'
 
-export const runtime = 'nodejs'
 export const maxDuration = 60
 
 export async function GET(req: NextRequest) {
