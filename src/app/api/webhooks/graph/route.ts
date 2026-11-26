@@ -1,3 +1,5 @@
+// stc/app/api/webhooks/graph api
+
 import { NextRequest, NextResponse } from 'next/server'
 import { processGraphNotifications } from '@/lib/graph-agent'
 
